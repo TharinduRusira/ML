@@ -29,7 +29,7 @@ public:
 
 	float getCost(float *x,float *y,float t0,float t1); // implements cost function
 	
-	void minimizeCost(float* x,float* y,float t0,float t1,float learningRate,int iterations); // this method implements gradient decsent to minimize the cost and hence find optimum theta values 
+	float* minimizeCost(float* x,float* y,float t0,float t1,float learningRate,int iterations); // this method implements gradient decsent to minimize the cost and hence find optimum theta values 
 
 	
 
