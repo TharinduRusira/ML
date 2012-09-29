@@ -1,4 +1,12 @@
 #pragma once
+
+
+/* 
+	Univariate linear regression model implemented by M.P. Tharindu Rusira Kumara
+	Gradient Descent method is used for minimizing the square error of the hypothesis. 
+*/
+
+
 class LinReg
 {
 public:
@@ -19,7 +27,11 @@ public:
 		return dataSize;
 	}
 
-	void minimizeCost();
+	float getCost(float *x,float *y,float t0,float t1); // implements cost function
+	
+	void minimizeCost(float* x,float* y,float t0,float t1,float learningRate,int iterations); // this method implements gradient decsent to minimize the cost and hence find optimum theta values 
+
+	
 
 
 
@@ -29,19 +41,8 @@ private:
 	float *X,*Y;
 	int dataSize;
 
-	float getCost(float x,float y,float t0,float t1)
-	{
-		for(int i=0;i<dataSize;i++)
-		{
-				float _cost=0;
-				_cost = _cost+ (0.5/dataSize)*(lin_hypothesis(x,t0,t1)-y)*(lin_hypothesis(x,t0,t1)-y);
-				
-		}
-	}
+	
 
-	float lin_hypothesis(float x,float theta0,float theta1)
-	{
-		return (theta0+ x*theta1);
-	}
+	
 };
 
