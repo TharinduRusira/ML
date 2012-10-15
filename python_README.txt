@@ -21,5 +21,5 @@ http://orion.math.iastate.edu/burkardt/data/regression/regression.html
     |   Procedure: We calculate the overall square cost over the training data set and   |
 	|	           minimize the cost using gradient decsent algorithm.					 | 
     |                                                                 					 |
-	|	Outcome: the algorithm is capable of deciding the class of a new data point      |
+	|	Outcome: the algorithm is capable of predicting the Y value of a new data point  |
 	|====================================================================================|
